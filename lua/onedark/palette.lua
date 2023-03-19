@@ -141,7 +141,7 @@ return {
 	},
 	warmer = {
 		black = "#101012",
-		bg0 = "#232326",
+		bg0 = "#1e1e1e",
 		bg1 = "#2c2d31",
 		bg2 = "#35363b",
 		bg3 = "#37383d",
@@ -169,7 +169,7 @@ return {
 	},
 	light = {
 		black = "#101012",
-		bg0 = "#fafafa",
+		bg0 = "#ffffff",
 		bg1 = "#f0f0f0",
 		bg2 = "#e6e6e6",
 		bg3 = "#dcdcdc",

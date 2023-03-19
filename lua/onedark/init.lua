@@ -1,6 +1,6 @@
 local M = {}
 
-M.styles_list = { 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light' }
+M.styles_list = { 'warmer', 'light' }
 
 ---Change onedark option (vim.g.onedark_config.option)
 ---It can't be changed directly by modifying that field due to a Neovim lua bug with global variables (onedark_config is a global variable)
@@ -20,8 +20,9 @@ function M.colorscheme()
     vim.g.colors_name = "onedark"
     if vim.o.background == 'light' then
         M.set_options('style', 'light')
+        M.set_options('toggle_style_index', 2)
     elseif vim.g.onedark_config.style == 'light' then
-        M.set_options('style', 'dark')
+        M.set_options('style', 'warmer')
     end
     require('onedark.highlights').setup()
     require('onedark.terminal').setup()
@@ -43,7 +44,7 @@ end
 
 local default_config = {
     -- Main options --
-    style = 'dark',    -- choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+    style = 'warmer',    -- choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     toggle_style_key = nil,
     toggle_style_list = M.styles_list,
     transparent = false,     -- don't set background
